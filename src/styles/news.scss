@@ -1,0 +1,90 @@
+.news-wrapper {
+  padding: 60px;
+}
+
+#news {
+  display: flex;
+  gap: 19.64px;
+
+  .news-card {
+    position: relative;
+    flex: 1 1 0;
+    background-color: white;
+    overflow: hidden;
+    cursor: pointer;
+
+    .news-image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding-top: 56.2%;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+    }
+
+    .news-info-wrapper {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 20px;
+      transition: all 0.5s;
+    }
+
+    .news-info {
+      padding-top: 56.2%;
+      position: relative;
+    }
+    .news-date {
+      font-family: "Roboto Mono", sans-serif;
+      font-size: 14px;
+      line-height: 2.143;
+      color: $light-gray;
+    }
+    .news-title {
+      font-family: "Roboto Mono", sans-serif;
+      font-size: 24px;
+      line-height: 1.25;
+      color: $dark-pink;
+      margin-bottom: 10px;
+    }
+    .news-text {
+      color: $medium-gray;
+      font-size: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    &:hover {
+      //   background-color: $dark-pink;
+
+      .news-info-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 200%;
+        top: -100%;
+        background: rgb(156, 156, 156);
+        background: linear-gradient(
+          180deg,
+          rgba(156, 156, 156, 0) 0%,
+          rgba(237, 101, 98, 1) 50%
+        );
+      }
+      .news-title,
+      .news-text,
+      .news-date {
+        color: white;
+        display: block;
+      }
+    }
+  }
+}

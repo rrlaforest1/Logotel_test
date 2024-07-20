@@ -1,0 +1,184 @@
+.tabs-wrapper {
+  padding: 60px;
+}
+
+#tabs {
+  display: flex;
+  gap: 19.64px;
+
+  .tab-card {
+    position: relative;
+    flex: 1 1 0;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    h5 {
+      font-size: 34px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      border-bottom: 1px solid;
+      padding-bottom: 30px;
+    }
+    .tab-img-wrapper {
+      position: relative;
+      padding: 30px;
+      margin: 0 auto;
+
+      &::before {
+        content: " ";
+        left: 9%;
+        top: 8%;
+        display: block;
+        position: absolute;
+        width: 80%;
+        padding-bottom: 80%;
+        background: gold;
+        border-radius: 50%;
+        z-index: 1;
+      }
+    }
+    img {
+      width: calc(100% - 20px);
+      max-width: 250px;
+      display: block;
+      z-index: 2;
+      position: relative;
+    }
+    p {
+      display: block;
+      padding: 30px;
+      margin: 0 auto;
+      color: $dark-gray;
+      text-align: center;
+      font-size: 16px;
+    }
+    button {
+      display: block;
+      padding: 30px;
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 250px;
+      width: calc(100% - 20px);
+      border-radius: 16px;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+    }
+
+    &.tab-1 {
+      .tab-title {
+        color: $dark-pink;
+        border-color: $dark-pink;
+      }
+
+      .tab-img-wrapper {
+        &::before {
+          background: $dark-pink;
+        }
+      }
+
+      button {
+        background-color: $dark-pink;
+      }
+    }
+
+    &.tab-2 {
+      .tab-title {
+        color: $dark-yellow;
+        border-color: $dark-yellow;
+      }
+      .tab-img-wrapper {
+        &::before {
+          background: $dark-yellow;
+        }
+      }
+      button {
+        background-color: $dark-yellow;
+      }
+    }
+
+    &.tab-3 {
+      .tab-title {
+        color: $dark-turquoise;
+        border-color: $dark-turquoise;
+      }
+      .tab-img-wrapper {
+        &::before {
+          background: $dark-turquoise;
+        }
+      }
+      button {
+        background-color: $dark-turquoise;
+      }
+    }
+
+    &:hover {
+      &.tab-1 {
+        background-color: $light-pink;
+        .tab-title {
+          color: white;
+          border-color: white;
+        }
+
+        .tab-img-wrapper {
+          &::before {
+            background: $dark-pink;
+          }
+        }
+
+        p {
+          color: white;
+        }
+
+        button {
+          background-color: white;
+          color: $dark-pink;
+        }
+      }
+
+      &.tab-2 {
+        background-color: $light-yellow;
+        .tab-title {
+          color: $dark-gray;
+          border-color: white;
+        }
+        .tab-img-wrapper {
+          &::before {
+            background: $dark-yellow;
+          }
+        }
+        button {
+          background-color: white;
+          color: $dark-yellow;
+        }
+      }
+
+      &.tab-3 {
+        background-color: $light-turquoise;
+        .tab-title {
+          color: white;
+          border-color: white;
+        }
+        .tab-img-wrapper {
+          &::before {
+            background: $dark-turquoise;
+          }
+        }
+
+        button {
+          background-color: white;
+          color: $dark-turquoise;
+        }
+      }
+    }
+  }
+}

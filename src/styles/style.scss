@@ -69,6 +69,10 @@ li {
   max-width: 1320px;
   margin: 0 auto;
 
+  /*
+    HEADER + NAV
+*/
+
   header {
     opacity: 80%;
     z-index: 3;
@@ -123,6 +127,10 @@ li {
     }
   }
 
+  /*
+    WAVES
+*/
+
   .waves {
     position: relative;
     display: flex;
@@ -138,15 +146,16 @@ li {
       max-width: 70%;
     }
     &.waves-top {
+      margin-top: -150px;
       margin-bottom: -1px;
       h2 {
-        top: 10%;
+        top: 30%;
         right: 60px;
         text-align: right;
       }
     }
     &.waves-bottom {
-      margin-top: -1px;
+      margin-top: -2px;
       h2 {
         bottom: 10%;
         left: 60px;
@@ -157,6 +166,10 @@ li {
       height: auto;
     }
   }
+
+  /*
+    FOOTER
+*/
 
   footer {
     background-color: $dark-gray;

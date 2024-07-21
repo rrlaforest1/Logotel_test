@@ -1,10 +1,13 @@
 .news-wrapper {
   padding: 60px;
+  z-index: 1;
+  position: relative;
 }
 
 #news {
   display: flex;
   gap: 19.64px;
+  z-index: 1;
 
   .news-card {
     position: relative;

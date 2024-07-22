@@ -65,6 +65,7 @@
     height: 46px;
     top: calc(50% + 15px);
     background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
 
     &.inactive {
@@ -106,6 +107,162 @@
 
       &.active {
         opacity: 1;
+      }
+    }
+  }
+}
+
+/*
+RESPONSIVE
+*/
+
+/*
+Laptop
+*/
+@media screen and (max-width: 1300px) {
+  #slider {
+    .slider-window {
+      .slide {
+        .slide-content-box {
+          h4 {
+            font-size: 5vw;
+            line-height: 1;
+          }
+          p {
+            font-size: 2vw;
+          }
+          button {
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+
+    .slider-arrow {
+      top: calc(60% + 15px);
+
+      &.arrow-left {
+        left: 40px;
+        background-image: url("../public/assets/images/slider/chevron-sinistra.png");
+      }
+      &.arrow-right {
+        right: 40px;
+        background-image: url("../public/assets/images/slider/chevron-destra.png");
+      }
+    }
+
+    .slider-nav {
+      top: 120px;
+
+      .slide-nav-button {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+/*
+Tablet
+*/
+@media screen and (max-width: 768px) {
+  #slider {
+    .slider-window {
+      .slide {
+        padding: 30px 50px;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+
+        .slide-content-box {
+          margin: 0;
+          align-items: center;
+
+          h4 {
+            font-size: 5vw;
+            line-height: 1;
+          }
+          p {
+            font-size: 2vw;
+          }
+          button {
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+
+    .slider-arrow {
+      width: 45px;
+      height: 68px;
+      top: 50%;
+      background-color: $dark-gray;
+      padding: 10px;
+      background-size: 70%;
+      background-position: center;
+      background-color: $dark-gray;
+
+      &.arrow-left {
+        left: 0;
+      }
+      &.arrow-right {
+        right: 0;
+      }
+    }
+
+    .slider-nav {
+      display: flex;
+      bottom: 0;
+      top: auto;
+      left: calc(50% - 120px);
+      .slide-nav-button {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+/*
+Smartphone
+*/
+@media screen and (max-width: 500px) {
+  #slider {
+    .slider-window {
+      .slide {
+        padding: 10px 50px 40px;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+
+        .slide-content-box {
+          gap: 10px;
+
+          h4 {
+            font-size: 6vw;
+            line-height: 1;
+          }
+          p {
+            font-size: 3vw;
+          }
+          button {
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+
+    .slider-arrow {
+      width: 45px;
+      height: 80px;
+      top: calc(50% - 40px);
+    }
+
+    .slider-nav {
+      left: calc(50% - 80px);
+      .slide-nav-button {
+        width: 40px;
+        height: 40px;
       }
     }
   }

@@ -7,6 +7,7 @@
     <title>
         <%= htmlWebpackPlugin.options.title %>
     </title>
+    <link rel="icon" type="image/x-icon" href="./public/assets/images/logo/logo_icon.png">
 </head>
 
 <body>
@@ -55,12 +56,22 @@
                         </svg>
                     </a>
                 </h1>
-                <ul id="nav-pages">
-                    <li><a href="#slider">Slider</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#paths">Percorso</a></li>
-                    <li><a href="#tabs">Tab</a></li>
-                </ul>
+                <div class="burger-menu">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="nav-pages">
+
+                        <li><a href="#slider">Slider</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#paths">Percorso</a></li>
+                        <li><a href="#tabs">Tab</a></li>
+                    </ul>
+
+                </div>
+
             </nav>
         </header>
         <main>

@@ -1,5 +1,5 @@
 .paths-wrapper {
-  padding: 120px 60px;
+  padding: 60px;
   background: rgb(39, 39, 39);
   background: linear-gradient(
     180deg,
@@ -9,6 +9,9 @@
 }
 
 #paths {
+  overflow: hidden;
+  padding: 50px 0;
+
   .timeline {
     max-width: 500px;
     margin: 0 auto;
@@ -199,5 +202,244 @@
         }
       }
     }
+  }
+}
+
+/*
+RESPONSIVE
+*/
+
+/*
+Laptop
+*/
+@media screen and (max-width: 1300px) {
+  .paths-wrapper {
+    padding: 30px;
+  }
+
+  #paths {
+    overflow: hidden;
+
+    .timeline {
+      max-width: calc(100% - 600px);
+      margin: 0 auto;
+
+      article {
+        h5 {
+          font-size: 3vw;
+          left: -70px;
+          span {
+            font-size: 5vw;
+          }
+        }
+
+        .path-text-wrapper {
+          padding: 70px;
+        }
+      }
+    }
+  }
+}
+
+/*
+Laptop
+*/
+@media screen and (max-width: 1000px) {
+  .paths-wrapper {
+    padding: 40px;
+  }
+
+  #paths {
+    overflow: hidden;
+
+    .timeline {
+      max-width: calc(100% - 400px);
+      margin: 0 auto;
+
+      article {
+        h5 {
+          font-size: 2vw;
+          left: -70px;
+          span {
+            font-size: 4vw;
+          }
+        }
+
+        .path-text-wrapper {
+          padding: 50px;
+
+          .path-text-box {
+            h4 {
+              font-size: 4vw;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+Tablet
+*/
+@media screen and (max-width: 768px) {
+  #paths {
+    overflow: hidden;
+
+    .timeline {
+      max-width: calc(100% - 215px);
+
+      article {
+        h5 {
+          font-size: 2vw;
+          left: -36px;
+          top: -37px;
+          span {
+            font-size: 4vw;
+          }
+        }
+
+        .path-icon-box {
+          top: -34px;
+          left: -18px;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        &:nth-child(even) {
+          .path-icon-box {
+            right: -30px;
+          }
+          h5 {
+            right: -40px;
+          }
+        }
+
+        .path-text-wrapper {
+          padding: 30px 20px;
+        }
+      }
+    }
+  }
+}
+
+/*
+Smartphone
+*/
+@media screen and (max-width: 500px) {
+  .paths-wrapper {
+    padding: 40px 10px;
+  }
+  #paths {
+    overflow: hidden;
+
+    .timeline {
+      max-width: calc(100% - 70px);
+
+      article {
+        h5 {
+          display: none;
+        }
+
+        .path-icon-box {
+          top: -34px;
+          left: -18px;
+          animation: pulse 1.3s infinite;
+
+          &.open {
+            animation: none;
+          }
+
+          &:hover {
+            box-shadow: none !important;
+          }
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        &:nth-child(even) {
+          .path-icon-box {
+            right: -30px;
+          }
+          h5 {
+            right: -40px;
+          }
+        }
+
+        .path-text-wrapper {
+          padding: 40px;
+
+          .path-text-box {
+            h4 {
+              font-size: 6vw;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+Pulse animation for mobile icons
+*/
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 20px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+@-webkit-keyframes pulse2 {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 30px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }

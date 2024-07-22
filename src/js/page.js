@@ -209,6 +209,9 @@ class Page {
       //Icon
       let pathIconBox = document.createElement("div");
       pathIconBox.classList.add("path-icon-box");
+      if (ind == 0) {
+        pathIconBox.classList.add("open");
+      }
 
       /**
        * Toggle path content on click
@@ -216,11 +219,16 @@ class Page {
       pathIconBox.addEventListener("click", (event) => {
         document.querySelectorAll(".path-section").forEach((element) => {
           element.querySelector(".path-text-box").classList.remove("open");
+          element.querySelector(".path-icon-box").classList.remove("open");
         });
 
         event.currentTarget
           .closest(".path-section")
           .querySelector(".path-text-box")
+          .classList.add("open");
+        event.currentTarget
+          .closest(".path-section")
+          .querySelector(".path-icon-box")
           .classList.add("open");
       });
 

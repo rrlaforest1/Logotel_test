@@ -1,7 +1,5 @@
 import "./styles/style.scss";
 
-console.log("9999");
-
 import Page from "./js/page.js";
 /**
  * Variables

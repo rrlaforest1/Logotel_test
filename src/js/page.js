@@ -16,8 +16,9 @@ class Page {
   }
 
   setHeader() {
-    console.log("setNav");
-
+    /**
+     * Listen to scroll so to collapse the nav
+     */
     window.addEventListener("scroll", () => {
       if (window.scrollY > 10) {
         this.header.classList.add("collapsed");
@@ -28,8 +29,6 @@ class Page {
   }
 
   setSlider() {
-    console.log("setSlider");
-
     /**
      * Build Slider Outer Elements
      */
@@ -105,8 +104,6 @@ class Page {
   }
 
   moveSlider(slidesContainer, source, slideNumber) {
-    console.log("moveSlider");
-
     const slidesQty = slides.length;
 
     // let sliderTotaWidth = slidesContainer.offsetWidth;
@@ -116,6 +113,10 @@ class Page {
 
     let newSlide;
 
+    /**
+     * Set movement for the slider for right and left arrow and for nav buttons
+     */
+
     switch (source) {
       case "right":
         newSlide = currentSlide < slidesQty ? currentSlide + 1 : currentSlide;
@@ -123,7 +124,6 @@ class Page {
       case "left":
         newSlide = currentSlide >= 1 ? currentSlide - 1 : currentSlide;
         break;
-
       default:
         newSlide = source != undefined ? source : 1;
         break;
@@ -131,6 +131,7 @@ class Page {
 
     slidesContainer.style.left = -slideWidth * (newSlide - 1) + "px";
 
+    //Stop arrows from working when the limits are reached
     this.slider.querySelector(".arrow-right").classList.remove("inactive");
     this.slider.querySelector(".arrow-left").classList.remove("inactive");
 
@@ -147,8 +148,9 @@ class Page {
   }
 
   setNews() {
-    console.log("setNews");
-
+    /**
+     * Build news cards
+     */
     news.map((nw, ind) => {
       let newsCard = document.createElement("article");
       newsCard.classList.add("news-card", `news-${ind + 1}`);
@@ -186,10 +188,8 @@ class Page {
   }
 
   setPaths() {
-    console.log("setPaths");
-
     /**
-     * Insert content
+     * Build path sections
      */
 
     let timeline = document.createElement("div");
@@ -262,7 +262,9 @@ class Page {
   }
 
   setTabs() {
-    console.log("setTabs");
+    /**
+     * Build tabs tiles
+     */
     tabs.map((tab, ind) => {
       let tabCard = document.createElement("article");
       tabCard.classList.add("tab-card", `tab-${ind + 1}`);

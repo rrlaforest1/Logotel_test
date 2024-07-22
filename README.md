@@ -12,6 +12,8 @@
 - Vanilla JS
 - Sass
 - HTML
+- Response
+- Data management
 
 ## Resources
 

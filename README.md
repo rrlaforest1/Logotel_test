@@ -7,7 +7,6 @@
 
 ## Key Features
 
-- OOP
 - Webpack
 - Vanilla JS
 - Sass
